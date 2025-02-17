@@ -76,6 +76,9 @@ const NeverHaveIEverScreen = () => {
   );
 };
 
+const glowRadius = 11; 
+
+//stylesheet
 const styles = StyleSheet.create({
   centered: {
     flex: 1,
@@ -86,6 +89,10 @@ const styles = StyleSheet.create({
     fontSize: 28,
     marginVertical: 50,
     color: '#FF1493',
+    textAlign: 'center',
+    textShadowColor: 'rgba(255, 255, 255, 0.7)', 
+    textShadowOffset: { width: 0, height: 0 }, 
+    textShadowRadius: glowRadius, 
   },
   question: {
     fontSize: 24,
@@ -93,7 +100,6 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     textAlign: 'center',
     fontWeight: 'bold',
-    marginTop: 160, 
   },
 });
 

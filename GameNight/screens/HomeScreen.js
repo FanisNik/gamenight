@@ -15,6 +15,7 @@ const HomeScreen = ({ navigation }) => {
     </ImageBackground>
   );
 };
+const glowRadius = 11; 
 
 const styles = StyleSheet.create({
   background: {
@@ -29,6 +30,10 @@ const styles = StyleSheet.create({
     fontSize: 28,
     marginVertical: 50,
     color: '#FF1493',
+    textAlign: 'center',
+    textShadowColor: 'rgba(255, 255, 255, 0.7)', 
+    textShadowOffset: { width: 0, height: 0 }, 
+    textShadowRadius: glowRadius, 
   },
   buttonContainer: {
     width: '80%',

@@ -92,8 +92,8 @@ const TruthOrDareScreen = () => {
           </>
         ) : isTruthSelected === null ? (
           <>
-            <Button title="Truth" onPress={handleSelectTruth} color="#32CD32" />
-            <Button title="Dare" onPress={handleSelectDare} color="#FF0000" />
+            <Button title="Truth" onPress={handleSelectTruth} color="#1E90FF" />
+            <Button title="Dare" onPress={handleSelectDare} color="#FF69B4" />
           </>
         ) : (
           <>
@@ -107,6 +107,9 @@ const TruthOrDareScreen = () => {
   );
 };
 
+const glowRadius = 11; 
+
+//stylesheet
 const styles = StyleSheet.create({
   centered: {
     flex: 1,
@@ -117,6 +120,10 @@ const styles = StyleSheet.create({
     fontSize: 28,
     marginVertical: 50,
     color: '#FF1493',
+    textAlign: 'center',
+    textShadowColor: 'rgba(255, 255, 255, 0.7)', 
+    textShadowOffset: { width: 0, height: 0 }, 
+    textShadowRadius: glowRadius, 
   },
   question: {
     fontSize: 24,

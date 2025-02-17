@@ -81,6 +81,9 @@ const LighterScreen = () => {
     </ImageBackground>
   );
 };
+
+const glowRadius = 11; 
+
 //stylesheet
 const styles = StyleSheet.create({
   container: {
@@ -92,6 +95,10 @@ const styles = StyleSheet.create({
     fontSize: 28,
     marginVertical: 50,
     color: '#FF1493',
+    textAlign: 'center',
+    textShadowColor: 'rgba(255, 255, 255, 0.7)', 
+    textShadowOffset: { width: 0, height: 0 }, 
+    textShadowRadius: glowRadius, 
   },
   question: {
     fontSize: 24,

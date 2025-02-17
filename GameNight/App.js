@@ -2,24 +2,27 @@ import React, { useState } from 'react';
 import { View, StyleSheet, ImageBackground } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { BlurView } from 'expo-blur';
+import { enableScreens } from 'react-native-screens'; 
 import HomeScreen from './screens/HomeScreen';
 import LighterScreen from './screens/LighterScreen';
 import TruthOrDareScreen from './screens/TruthOrDareScreen';
 import NeverHaveIEverScreen from './screens/NeverHaveIEverScreen';
 import SplashScreen from './screens/SplashScreen'; 
 
+// Enable native screen optimization for smoother transitions
+enableScreens();
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true); 
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleFinishLoading = () => {
-    setIsLoading(false); 
+    setIsLoading(false);
   };
 
   if (isLoading) {
-    return <SplashScreen onFinish={handleFinishLoading} />; 
+    return <SplashScreen onFinish={handleFinishLoading} />;
   }
 
   return (
@@ -27,8 +30,6 @@ export default function App() {
       source={require('./assets/background.jpg')}
       style={styles.background}
     >
-      <BlurView intensity={40} tint="light" style={StyleSheet.absoluteFill} />
-
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="Home"
@@ -47,11 +48,30 @@ export default function App() {
             contentStyle: {
               backgroundColor: 'transparent',
             },
+            // Use smooth fade and slide transitions
+            animation: 'fade', // Smooth fade transition
+            gestureEnabled: true, // Enable gestures for smoother navigation
+            cardStyleInterpolator: ({ current, next, inverted, layouts }) => {
+              const progress = Animated.add(current.progress, next ? next.progress : 0);
+              return {
+                cardStyle: {
+                  opacity: progress,
+                  transform: [
+                    {
+                      translateX: progress.interpolate({
+                        inputRange: [0, 1],
+                        outputRange: [layouts.screen.width, 0],
+                      }),
+                    },
+                  ],
+                },
+              };
+            },
           }}
         >
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Lighter" component={LighterScreen} />
-          <Stack.Screen name="TruthOrDare" component={TruthOrDareScreen} />
+          <Stack.Screen name="TruthOrDare" component={TruthOrDareScreen}  />
           <Stack.Screen name="NeverHaveIEver" component={NeverHaveIEverScreen} />
         </Stack.Navigator>
       </NavigationContainer>

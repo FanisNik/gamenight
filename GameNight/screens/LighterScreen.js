@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Button, Alert, StyleSheet } from 'react-native';
+import { View, Text, Button, Alert, StyleSheet, ImageBackground } from 'react-native';
 
 const LighterScreen = () => {
   const okayQuestions = [
@@ -52,25 +52,27 @@ const LighterScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Lighter Game</Text>
-      {!isGameSelected ? (
-        <>
-          <Button title="Start Game" onPress={handleSelectGame} color="#FF6347" />
-        </>
-      ) : isExtremeSelected === null ? (
-        <>
-          <Button title="Standard" onPress={handleSelectStandard} color="#4682B4" />
-          <Button title="Extreme" onPress={handleSelectExtreme} color="#FF4500" />
-        </>
-      ) : (
-        <>
-          <Text style={styles.question}>{questions[currentQuestionIndex]}</Text>
-          <Button title="Next Question" onPress={handleNextQuestion} color="#1E90FF" />
-          <Button title="Skip Question" onPress={handleSkipQuestion} color="#FF69B4" />
-        </>
-      )}
-    </View>
+    <ImageBackground source={require('../assets/background.jpg')} style={{ flex: 1 }}>
+      <View style={styles.container}>
+        <Text style={styles.title}>Lighter Game</Text>
+        {!isGameSelected ? (
+          <>
+            <Button title="Start Game" onPress={handleSelectGame} color="#FF6347" />
+          </>
+        ) : isExtremeSelected === null ? (
+          <>
+            <Button title="Standard" onPress={handleSelectStandard} color="#4682B4" />
+            <Button title="Extreme" onPress={handleSelectExtreme} color="#FF4500" />
+          </>
+        ) : (
+          <>
+            <Text style={styles.question}>{questions[currentQuestionIndex]}</Text>
+            <Button title="Next Question" onPress={handleNextQuestion} color="#1E90FF" />
+            <Button title="Skip Question" onPress={handleSkipQuestion} color="#FF69B4" />
+          </>
+        )}
+      </View>
+    </ImageBackground>
   );
 };
 //stylesheet
@@ -79,7 +81,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'center',
-    backgroundColor: '#f0f8ff',
   },
   title: {
     fontSize: 28,
@@ -89,10 +90,10 @@ const styles = StyleSheet.create({
   question: {
     fontSize: 24,
     marginVertical: 25,
-    color: '#000080',
+    color: '#FFFFFF',
     textAlign: 'center',
     fontWeight: 'bold',
-    marginTop: 180, 
+    marginTop: 160, 
   },
 });
 

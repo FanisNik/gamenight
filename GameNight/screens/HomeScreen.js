@@ -3,7 +3,7 @@ import { View, Text, Button, StyleSheet, ImageBackground } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <ImageBackground source={require('../assets/background.jpg')} style={styles.background}>
+    <ImageBackground source={require('../assets/background copy 4.jpg')} style={styles.background}>
       <View style={styles.container}>
         <Text style={styles.title}>Choose Your Game</Text>
         <View style={styles.buttonContainer}>

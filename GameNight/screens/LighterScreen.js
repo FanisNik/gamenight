@@ -57,18 +57,24 @@ const LighterScreen = () => {
         <Text style={styles.title}>Lighter Game</Text>
         {!isGameSelected ? (
           <>
-            <Button title="Start Game" onPress={handleSelectGame} color="#FF6347" />
+            <View style={styles.centered}>
+              <Button title="Start Game" onPress={handleSelectGame} color="#FF6347" />
+            </View>
           </>
         ) : isExtremeSelected === null ? (
           <>
-            <Button title="Standard" onPress={handleSelectStandard} color="#4682B4" />
-            <Button title="Extreme" onPress={handleSelectExtreme} color="#FF4500" />
+            <View style={styles.centered}>
+              <Button title="Standard" onPress={handleSelectStandard} color="#4682B4" />
+              <Button title="Extreme" onPress={handleSelectExtreme} color="#FF4500" />
+            </View>
           </>
         ) : (
           <>
-            <Text style={styles.question}>{questions[currentQuestionIndex]}</Text>
-            <Button title="Next Question" onPress={handleNextQuestion} color="#1E90FF" />
-            <Button title="Skip Question" onPress={handleSkipQuestion} color="#FF69B4" />
+            <View style={styles.centered}>
+              <Text style={styles.question}>{questions[currentQuestionIndex]}</Text>
+              <Button title="Next Question" onPress={handleNextQuestion} color="#1E90FF" />
+              <Button title="Skip Question" onPress={handleSkipQuestion} color="#FF69B4" />
+            </View>
           </>
         )}
       </View>
@@ -79,8 +85,8 @@ const LighterScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
+    justifyContent: 'center', 
+    alignItems: 'center', 
   },
   title: {
     fontSize: 28,
@@ -93,7 +99,10 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     textAlign: 'center',
     fontWeight: 'bold',
-    marginTop: 160, 
+  },
+  centered: {
+    justifyContent: 'center', 
+    alignItems: 'center', 
   },
 });
 

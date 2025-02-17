@@ -79,7 +79,7 @@ const TruthOrDareScreen = () => {
 
   return (
     <ImageBackground source={require('../assets/background.jpg')} style={{ flex: 1 }}>
-      <View style={styles.container}>
+      <View style={styles.centered}>
         <Text style={styles.title}>Truth or Dare</Text>
         {!isGameSelected ? (
           <>
@@ -106,11 +106,11 @@ const TruthOrDareScreen = () => {
     </ImageBackground>
   );
 };
-//stylesheet
+
 const styles = StyleSheet.create({
-  container: {
+  centered: {
     flex: 1,
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   title: {
@@ -124,7 +124,6 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     textAlign: 'center',
     fontWeight: 'bold',
-    marginTop: 160, 
   },
 });
 

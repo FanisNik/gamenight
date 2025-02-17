@@ -53,7 +53,7 @@ const NeverHaveIEverScreen = () => {
 
   return (
     <ImageBackground source={require('../assets/background.jpg')} style={{ flex: 1 }}>
-      <View style={styles.container}>
+      <View style={styles.centered}>
         <Text style={styles.title}>Never Have I Ever</Text>
         {!isGameSelected ? (
           <>
@@ -75,11 +75,11 @@ const NeverHaveIEverScreen = () => {
     </ImageBackground>
   );
 };
-//stylesheet
+
 const styles = StyleSheet.create({
-  container: {
+  centered: {
     flex: 1,
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   title: {

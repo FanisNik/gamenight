@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, ImageBackground } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -7,13 +7,24 @@ import HomeScreen from './screens/HomeScreen';
 import LighterScreen from './screens/LighterScreen';
 import TruthOrDareScreen from './screens/TruthOrDareScreen';
 import NeverHaveIEverScreen from './screens/NeverHaveIEverScreen';
+import SplashScreen from './screens/SplashScreen'; 
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true); 
+
+  const handleFinishLoading = () => {
+    setIsLoading(false); 
+  };
+
+  if (isLoading) {
+    return <SplashScreen onFinish={handleFinishLoading} />; 
+  }
+
   return (
     <ImageBackground
-      source={require('./assets/background.jpg')} 
+      source={require('./assets/background.jpg')}
       style={styles.background}
     >
       <BlurView intensity={40} tint="light" style={StyleSheet.absoluteFill} />
@@ -23,15 +34,15 @@ export default function App() {
           initialRouteName="Home"
           screenOptions={{
             headerStyle: {
-              backgroundColor: 'transparent',  
-              shadowColor: 'transparent', 
-              borderBottomWidth: 0, 
+              backgroundColor: 'transparent',
+              shadowColor: 'transparent',
+              borderBottomWidth: 0,
             },
             headerTransparent: true,
             headerTintColor: '#ffffff',
             headerTitleStyle: {
               fontWeight: 'bold',
-              color: 'transparent', 
+              color: 'transparent',
             },
             contentStyle: {
               backgroundColor: 'transparent',

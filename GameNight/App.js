@@ -9,8 +9,7 @@ import TruthOrDareScreen from './screens/TruthOrDareScreen';
 import NeverHaveIEverScreen from './screens/NeverHaveIEverScreen';
 import SplashScreen from './screens/SplashScreen'; 
 
-// Enable native screen optimization for smoother transitions
-enableScreens();
+enableScreens(); 
 
 const Stack = createNativeStackNavigator();
 
@@ -48,9 +47,9 @@ export default function App() {
             contentStyle: {
               backgroundColor: 'transparent',
             },
-            // Use smooth fade and slide transitions
-            animation: 'fade', // Smooth fade transition
-            gestureEnabled: true, // Enable gestures for smoother navigation
+
+            animation: 'slide_from_bottom', 
+            gestureEnabled: true, 
             cardStyleInterpolator: ({ current, next, inverted, layouts }) => {
               const progress = Animated.add(current.progress, next ? next.progress : 0);
               return {

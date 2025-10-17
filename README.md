@@ -3,70 +3,44 @@
 A great drinking game to play with friends. The game features 3 games in 1. Each game has 2 modes, standard and extreme.
 The user can skip the questions but he will get a popup notification to drink a random amount of sips.
 
-## Games Featured
--Truth or Dare 
--Lighter Game 
--Never Have I Ever 
+##  Games Included
 
-## Get started
+1. **Truth or Dare** – Test your friends’ courage and secrets.  
+2. **Lighter Game** – Fun, quick challenges to spice up the party.  
+3. **Never Have I Ever** – Discover who’s done what.
 
-1. Install dependencies
+Each game features:
+- **Standard Mode** – Casual gameplay for light fun.  
+- **Extreme Mode** – Riskier challenges for the brave.
 
-   ```bash
-   npm install
-   ```
+> Skip a question? You’ll get a popup to drink a random number of sips. 🍸
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+##  Screenshots
+<img width="646" height="714" alt="Screenshot 2025-09-09 at 7 42 03 PM" src="https://github.com/user-attachments/assets/65158289-e465-47e9-aa62-beaa850c7c23" />
 
-In the output, you'll find options to open the app in a
+# Lighter Game 
+<img width="646" height="714" alt="Screenshot 2025-09-09 at 7 45 16 PM" src="https://github.com/user-attachments/assets/f8145a7f-843b-47c4-b10d-e12c0fde0983" />
+ <img width="646" height="714" alt="Screenshot 2025-09-09 at 7 45 34 PM" src="https://github.com/user-attachments/assets/dc7ce8de-ee36-4ea1-b779-b3bffb84d6a9" />
+ 
+# Truth Or Dare  
+<img width="646" height="714" alt="Screenshot 2025-09-09 at 7 45 47 PM" src="https://github.com/user-attachments/assets/005900f8-6d50-4d1d-87d2-9ee8727c2bb7" />
+<img width="646" height="714" alt="Screenshot 2025-09-09 at 7 45 51 PM" src="https://github.com/user-attachments/assets/af689a16-ccf4-456a-a829-8e3334c69331" />
+<img width="646" height="714" alt="Screenshot 2025-09-09 at 7 45 59 PM" src="https://github.com/user-attachments/assets/983464a2-f503-4526-b455-27ee33ea6dda" />
+<img width="646" height="714" alt="Screenshot 2025-09-09 at 7 46 14 PM" src="https://github.com/user-attachments/assets/57314649-cabe-452b-87e6-75f5400505a9" />
+<img width="646" height="714" alt="Screenshot 2025-09-09 at 7 46 23 PM" src="https://github.com/user-attachments/assets/d1845b78-c08b-40cc-b4a5-07f188059d31" />
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+# Never Have I Ever
+ <img width="646" height="714" alt="Screenshot 2025-09-09 at 7 46 35 PM" src="https://github.com/user-attachments/assets/7b9f8b70-dc47-4b15-bcfa-e1ff84a7b329" />
+<img width="646" height="714" alt="Screenshot 2025-09-09 at 7 46 40 PM" src="https://github.com/user-attachments/assets/5ee303f4-69fa-45e8-b703-c4ea6245b3b2" />
+<img width="646" height="714" alt="Screenshot 2025-09-09 at 7 46 49 PM" src="https://github.com/user-attachments/assets/5ba0eb5d-a016-4c32-b3bd-0a3ce003a9f6" />
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+##  Features
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-
-
-
-## Screenshots
-
-![IMG_6874](https://github.com/user-attachments/assets/7f81f39d-fb52-417b-9b68-72abc9b1c5a4)
-
-![IMG_6872](https://github.com/user-attachments/assets/382c56b7-7b10-49d1-bd55-d7b1e6f9cbc5)
-
-![IMG_6871](https://github.com/user-attachments/assets/0aca213c-f8d6-4b39-8432-696314ff039c)
-
-![IMG_6870](https://github.com/user-attachments/assets/9cc40800-55a0-4a90-a3c8-4a6af44c3339)
-
-![IMG_6869](https://github.com/user-attachments/assets/ce764b27-baa2-4822-a9b8-fdb1ea7b9d15)
-
-
+- 3 games in 1 app 
+- 2 difficulty modes: Standard & Extreme
+- Skip questions with random sip notifications
+- Clean, intuitive UI for easy navigation
